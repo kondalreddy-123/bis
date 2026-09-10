@@ -1,1 +1,0 @@
-const safe=(fn,fallback)=>{try{return fn()}catch{return fallback}}; export const get=(k,f)=>safe(()=>JSON.parse(localStorage.getItem(k))??f,f); export const set=(k,v)=>safe(()=>localStorage.setItem(k,JSON.stringify(v)),null); export const remove=(k)=>safe(()=>localStorage.removeItem(k),null); export const clear=()=>safe(()=>localStorage.clear(),null);

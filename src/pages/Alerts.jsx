@@ -1,3 +1,0 @@
-import { PageTitle } from './shared';
-import { AlertTriangle } from 'lucide-react';
-export default function Alerts({alerts,setAlerts}){return <><PageTitle eyebrow="MONITORING" title="Alerts" text="Prototype alerts for procurement review." />{alerts.length?<div className="alert-list">{alerts.map(a=><div className={'alert '+(a.read?'read':'')} key={a.id}><AlertTriangle/><div><span className="badge amber">{a.type}</span><p>{a.text}</p></div><button onClick={()=>setAlerts(x=>x.map(y=>y.id===a.id?{...y,read:true}:y))}>{a.read?'Read':'Mark as read'}</button><button onClick={()=>setAlerts(x=>x.filter(y=>y.id!==a.id))}>Dismiss</button></div>)}</div>:<div className="empty"><h3>No active alerts</h3><p>Your local alert list is clear.</p></div>}</>}

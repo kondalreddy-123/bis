@@ -1,1 +1,0 @@
-import {CheckCircle2,Circle} from 'lucide-react'; export default function SafetyChecklist({items,onToggle}){return <div className="checklist">{items.map((x,i)=><button key={x.text} onClick={()=>onToggle(i)} className={x.done?'done':''}>{x.done?<CheckCircle2/>:<Circle/>}<span>{x.text}</span></button>)}</div>}
