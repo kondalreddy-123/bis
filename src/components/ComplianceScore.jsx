@@ -1,1 +1,0 @@
-export default function ComplianceScore({value=87}){return <div className="compliance-score"><div><b>{value}%</b><span>Compliance readiness</span></div><div className="bigbar"><i style={{width:value+'%'}}/></div></div>}
