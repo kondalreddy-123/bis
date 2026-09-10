@@ -1,0 +1,2 @@
+import {Menu,Search,Command} from 'lucide-react';
+export default function Header({onMenu,onSearch}){return <header><button className="icon" onClick={onMenu} aria-label="Open menu"><Menu/></button><div className="top-search"><Search size={17}/><input placeholder="Search standards, products, applications..." onKeyDown={e=>e.key==='Enter'&&onSearch(e.target.value)}/><kbd>Ctrl K</kbd></div><div className="header-note"><Command size={15}/> Local Intelligence</div></header>}
