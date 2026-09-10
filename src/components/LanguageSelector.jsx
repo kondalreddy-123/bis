@@ -1,1 +1,0 @@
-export default function LanguageSelector({value,onChange}){return <select value={value} onChange={e=>onChange(e.target.value)}><option>English</option><option>हिन्दी</option><option>తెలుగు</option><option>தமிழ்</option><option>ಕನ್ನಡ</option><option>മലയാളം</option><option>मराठी</option><option>বাংলা</option><option>ગુજરાતી</option><option>ਪੰਜਾਬੀ</option></select>}
